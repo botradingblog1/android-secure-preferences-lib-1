@@ -1,7 +1,5 @@
 # Android library for storing preferences securely (Java)
 
-## NOTE: Use at your own risk. The library has not been production tested
-
 ## Overview
 The purpose or this project is to show how preferences can be stored securely in your app.
 For example, sometimes it is necessary to store sensitive user information persistently in your app (e.g. a user's DOB or ddress).
@@ -10,6 +8,8 @@ The default Android SharedPreferences are saved in a plain text XML file in the 
 This project shows you how to create a wrapper around the standard SharedPreferences class that encrypts both preference keys and values with a strong encryption algorithm.
 
 Both preference keys and values can be encrypted using AES-256 CBC mode. Encryption keys are generated when the SecurePreferences are intialized and stored in the Android KeyStore.
+
+NOTE: Use at your own risk. The library has not been tested in a production app
 
 ## Supporting material
 For more detailed information about the implementation, please see my [blog post on storing preferences securely](http://justmobiledev.com/storing-preferences-securely-on-android/).
