@@ -1,6 +1,7 @@
 package com.justmobiledev.secure_preferences;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.SharedPreferences;
 
 public class SecurePrefsBuilder {
@@ -32,13 +33,13 @@ public class SecurePrefsBuilder {
         return this;
     }
 
-    public SharedPreferences createSharedPrefs() {
-        SharedPreferences sharedPrefDelegate = this.application.getSharedPreferences(this.sharedPrefFileName, 0);
+    public SharedPreferences createSharedPrefs(Context context) {
+        SharedPreferences sharedPrefDelegate = context.getSharedPreferences(this.sharedPrefFileName, 0);
         Object sharedPreferences;
         if (!this.isObfuscated && !this.isKeyObfuscated) {
             sharedPreferences = sharedPrefDelegate;
         } else {
-            sharedPreferences = new SecurePrefs(this.application, sharedPrefDelegate, this.isKeyObfuscated);
+            sharedPreferences = new SecurePrefs(context, sharedPrefDelegate, this.isKeyObfuscated);
         }
 
         return (SharedPreferences)sharedPreferences;

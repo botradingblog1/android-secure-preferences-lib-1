@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         // Bind UI controls
         editTextPrefs = findViewById(R.id.edittext_pref_value);
@@ -46,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 .obfuscateValue(true)
                 .obfuscateKey(true)
                 .setSharePrefFileName(SECURE_PREFS_FILE_NAME)
-                .createSharedPrefs();
-
+                .createSharedPrefs(this);
 
         // Register listeners
         startButton.setOnClickListener(new View.OnClickListener() {
