@@ -35,6 +35,5 @@ dependencies {
 
 
     // Dependency on Secure Preferences Module
-    compile project(path: ':secure_preferences')
-
+    implementation project(":secure_preferences")
 }
