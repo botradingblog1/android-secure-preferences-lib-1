@@ -1,4 +1,7 @@
-# Sample app for storing preferences securely in Android (Java)
+# Android library for storing preferences securely (Java)
+
+## NOTE: Use at your own risk. The library has not been production tested
+
 ## Overview
 The purpose or this project is to show how preferences can be stored securely in your app.
 For example, sometimes it is necessary to store sensitive user information persistently in your app (e.g. a user's DOB or ddress).
@@ -9,7 +12,7 @@ This project shows you how to create a wrapper around the standard SharedPrefere
 Both preference keys and values can be encrypted using AES-256 CBC mode. Encryption keys are generated when the SecurePreferences are intialized and stored in the Android KeyStore.
 
 ## Supporting material
-For more detailed information about the implementation, please see my [blog post on storing preferences securely](http://justmobiledev.com/storing-preferences-securely-on-android/), for a detailed explanation.
+For more detailed information about the implementation, please see my [blog post on storing preferences securely](http://justmobiledev.com/storing-preferences-securely-on-android/).
 
 The Android documentation on [the Android Keystore System](https://developer.android.com/training/articles/keystore) is a good read to better understand the project.
 
