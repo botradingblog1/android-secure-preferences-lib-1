@@ -49,14 +49,13 @@ dependencies {
         // Add a preference
         SharedPreferences.Editor editor = securePreferences.edit();
 
-        String prefValue = "test string";
-
         // Store the string
-        editor.putString("test_key", prefValue);
+	final String prefKey = "test_key";
+        editor.putString(prefKey, "my test string");
         editor.commit();
 
         // Get the string
-        String prefValueRetrieved = securePreferences.getString("test_key", "");
+        String prefValueRetrieved = securePreferences.getString(prefKey, "");
 ```
 
 ## Implementation
